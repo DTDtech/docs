@@ -1,0 +1,96 @@
+---
+title: "Version History"
+---
+
+Manage and track changes to your application throughout development with comprehensive version control.
+
+## Understanding Version History
+
+Your version history provides a complete timeline of your application's development, with each entry representing a specific state of your code at a particular point in time. Every commit creates a new version that you can preview, test, and deploy.
+
+The version history interface displays:
+
+- **Commit messages** describing what changed
+- **Commit hashes** for unique identification
+- **Timestamps** showing when changes were made
+- **Environment tags** indicating deployment status (Development, Production, Preview)
+
+## Creating Preview Deployments
+
+Preview deployments let you test any version of your application in an isolated environment before promoting changes to production.
+
+To create a preview:
+
+1. Navigate to any version in your history
+2. Click the **Create Preview** button
+3. Wait for the preview environment to build and deploy
+
+Each preview deployment runs independently with its own:
+
+- Application instance
+- Database copy
+- Environment variables and secrets
+- Accessible URL for testing
+
+  <video controls className="w-full aspect-video rounded-xl" autoPlay muted loop src="https://pub-85f40fb1901f44d59eed58ebbdf77a13.r2.dev/Screenity%20video%20-%20Sep%2024%2C%202025%2C%202%2049%20PM.mp4" />
+
+## Interacting with Preview Deployments
+
+Once a preview is created, click **View Preview Deployment** to access a comprehensive management interface with three key areas:
+
+### Database Tab
+
+Inspect and explore the preview environment's database:
+
+- View table structures and data
+- Browse records without affecting production
+- Verify data migrations and schema changes
+- Export data for analysis
+
+  <video controls className="w-full aspect-video rounded-xl" autoPlay muted loop src="https://pub-85f40fb1901f44d59eed58ebbdf77a13.r2.dev/Screenity%20video%20-%20Sep%2024%2C%202025%2C%203%2040%20PM.mp4" />
+
+### Secret Management Tab
+
+Configure environment-specific secrets and variables:
+
+- Add new secrets using the name/value form
+- View all saved secrets for the preview environment
+- Update existing secret values
+- Test integrations with third-party services using preview-specific API keys
+
+  <video controls className="w-full aspect-video rounded-xl" autoPlay muted loop src="https://pub-85f40fb1901f44d59eed58ebbdf77a13.r2.dev/Screenity%20video%20-%20Sep%2024%2C%202025%2C%203%2043%20PM.mp4" />
+
+### SQL Editor Tab
+
+Execute queries directly against the preview database:
+
+- Run SELECT queries to inspect data
+- Test complex queries before production deployment
+- Debug database-related issues
+- Validate data transformations and migrations
+
+  <video controls className="w-full aspect-video rounded-xl" autoPlay muted loop src="https://pub-85f40fb1901f44d59eed58ebbdf77a13.r2.dev/Screenity%20video%20-%20Sep%2024%2C%202025%2C%203%2047%20PM.mp4" />
+
+## Deploying to Production
+
+When you're satisfied with a preview deployment, promote it to production with confidence:
+
+1. Click **Deploy to Production** from the preview deployment dialog
+2. The system will automatically:
+   - Analyze differences between preview and production databases
+   - Generate migration statements for any schema changes
+   - Present the migration SQL for your review
+3. Review the migration statements:
+   - Inspect each generated SQL statement
+   - Edit migrations if adjustments are needed
+   - Add custom migration logic if required
+   - Confirm the migrations are safe to execute
+4. Upon confirmation, the system will:
+   - Execute the approved migrations on the production database
+   - Deploy the exact code from that version
+   - Update production secrets and environment variables
+   - Create a production deployment record
+
+The production deployment maintains full traceability, showing which preview was promoted, what migrations were applied, and when the deployment occurred.
+
+<video controls className="w-full aspect-video rounded-xl" autoPlay muted loop src="https://pub-85f40fb1901f44d59eed58ebbdf77a13.r2.dev/Screenity%20video%20-%20Sep%2024%2C%202025%2C%204%2002%20PM.mp4" />
