@@ -1,0 +1,73 @@
+---
+title: "Assigning a Domain"
+---
+
+Assigning a custom domain to your application allows users to access it through a clean, branded web address instead of a system-generated one. The setup involves configuring your DNS records and linking them to your deployed app.
+
+## Understanding Domain Assignment
+
+When you assign a domain, you’re essentially telling the internet:
+
+> “When someone types `app.mydomain.com`, send them to my application.”
+
+To achieve this, you’ll configure **DNS records** (instructions that connect your domain name to your app). Don’t worry if this sounds technical—we’ll guide you step by step.
+
+The process involves **three steps**:
+
+1. **DNS Setup** – Configure your DNS provider to point your domain to our system
+2. **Assign Frontend Domain** – Choose the subdomain for your application (e.g., `app.mydomain.com`)
+3. **Assign Authentication Domain** – Confirm the dedicated authentication subdomain (`auth.mydomain.com`)
+
+---
+
+## Step 1: DNS Setup
+
+Before assigning the domain, you’ll need to add **CNAME records** to your domain registrar (where you purchased your domain, such as GoDaddy, Cloudflare, or Namecheap).
+
+You will need to create **two records**:
+
+- **Frontend Subdomain** (e.g., `app.mydomain.com`) → Points users to your application
+- **Authentication Subdomain** (`auth.mydomain.com`) → Reserved for secure login and authentication
+
+> Think of CNAME records like forwarding instructions: they tell browsers where to find your app when someone types in your domain.
+
+After creating these records, DNS changes may take a few minutes to propagate.
+
+---
+
+## Step 2: Assign Frontend Domain
+
+Once DNS is set up, return to the app builder and enter your **frontend subdomain** (for example: `dev.mydomain.com` or `app.mydomain.com`).
+
+- The system will automatically validate whether the DNS record is correctly configured.
+- Use the **Refresh Status** button to check progress if it shows as "Initializing."
+
+⚠️ Note: The `auth` subdomain is reserved for authentication and cannot be used as your frontend domain.
+
+<video controls className="w-full aspect-video rounded-xl" autoPlay muted loop src="https://pub-85f40fb1901f44d59eed58ebbdf77a13.r2.dev/Screenity%20video%20-%20Sep%2024%2C%202025%2C%2010%2020%20PM.mp4" />
+
+---
+
+## Step 3: Assign Authentication Domain
+
+For authentication, the system automatically reserves a dedicated subdomain:
+
+- `auth.mydomain.com`
+
+You don’t need to choose this—it’s fixed and required to keep authentication traffic separate from your main app.
+
+- Just confirm this step and click **Assign Backend Domain**.
+- Again, you can use **Refresh Status** to check if the DNS configuration has been recognized.
+
+<video controls className="w-full aspect-video rounded-xl" autoPlay muted loop src="https://pub-85f40fb1901f44d59eed58ebbdf77a13.r2.dev/Screenity%20video%20-%20Sep%2024%2C%202025%2C%2010%2022%20PM.mp4" />
+
+---
+
+## Finalizing Domain Assignment
+
+Once both frontend and authentication subdomains are assigned, your application will be accessible using your chosen domain.
+
+- **Frontend domain**: Where users visit your app
+- **Authentication domain**: Where login, signup, and authentication happen securely
+
+This separation ensures better security and reliability for your application.
