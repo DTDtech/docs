@@ -13,20 +13,24 @@
       {
         "group": "Getting started",
         "pages": [
-          "index",
-          "development"
+          "index"
         ]
       },
       {
-        "group": "API reference",
+        "group": "Basics",
         "pages": [
-          "api-reference/introduction",
-          "api-reference/endpoint/database",
-          "api-reference/endpoint/design-decision",
-          "api-reference/endpoint/domain-assignment",
-          "api-reference/endpoint/registration-setting",
-          "api-reference/endpoint/tools-integration",
-          "api-reference/endpoint/version-management"
+          "basics/introduction",
+          "basics/endpoint/database",
+          "basics/endpoint/domain-assignment",
+          "basics/endpoint/registration-setting",
+          "basics/endpoint/tools-integration",
+          "basics/endpoint/version-management"
+        ]
+      },
+      {
+        "group": "Account & Billing",
+        "pages": [
+          "billing/account-and-subscriptions"
         ]
       }
     ],
