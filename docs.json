@@ -9,53 +9,49 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
+    "groups": [
       {
-        "tab": "Guides",
-        "groups": [
-          {
-            "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
+        "group": "Getting started",
+        "pages": [
+          "index",
+          "quickstart",
+          "development"
         ]
       },
       {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          }
+        "group": "Customization",
+        "pages": [
+          "essentials/settings",
+          "essentials/navigation"
+        ]
+      },
+      {
+        "group": "Writing content",
+        "pages": [
+          "essentials/markdown",
+          "essentials/code",
+          "essentials/images",
+          "essentials/reusable-snippets"
+        ]
+      },
+      {
+        "group": "AI tools",
+        "pages": [
+          "ai-tools/cursor",
+          "ai-tools/claude-code",
+          "ai-tools/windsurf"
+        ]
+      },
+      {
+        "group": "API reference",
+        "pages": [
+          "api-reference/introduction",
+          "api-reference/endpoint/database",
+          "api-reference/endpoint/design-decision",
+          "api-reference/endpoint/domain-assignment",
+          "api-reference/endpoint/registration-setting",
+          "api-reference/endpoint/tools-integration",
+          "api-reference/endpoint/version-management"
         ]
       }
     ],

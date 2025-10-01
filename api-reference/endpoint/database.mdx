@@ -1,0 +1,113 @@
+---
+title: "Database Viewer"
+description: "Inspect your application's database during development"
+---
+
+Database Viewer lets you inspect tables, view data, and access connection details—all from within the builder interface. It's your window into the data layer of your application.
+
+<video controls className="w-full aspect-video rounded-xl" autoPlay muted loop src="https://pub-85f40fb1901f44d59eed58ebbdf77a13.r2.dev/Screenity%20video%20-%20Oct%201%2C%202025%2C%203%2056%20PM.mp4" />
+
+## Understanding the Database Viewer
+
+The Database Viewer serves as your real-time database inspector:
+
+> "See your data as it exists right now, inspect table structures, and access connection details—all without leaving the builder."
+
+This tool is essential during development for debugging, verifying data operations, and understanding your database structure. Whether you're testing new features or troubleshooting issues, the Database Viewer gives you immediate visibility into your data.
+
+The viewer provides **two main functions**:
+
+1. **Data Inspection** – Browse tables and view actual data records
+2. **Connection Information** – Access database credentials and connection URLs
+
+---
+
+## Accessing the Database Viewer
+
+Getting to your database is simple and always available during development:
+
+1. Look for the **Database** section in your application's sidebar
+2. Click **View Database** to open the viewer
+3. Your database tables and data will load automatically
+
+The viewer displays your database in a familiar spreadsheet-like format, making it easy to understand your data at a glance.
+
+### What You'll See
+
+When you open the Database Viewer, you'll find:
+
+- **Table List** – All tables in your database shown in the navigation
+- **Data Grid** – Selected table's data displayed in rows and columns
+- **Column Headers** – Field names and data types for each column
+- **Pagination Controls** – Navigate through large datasets easily
+
+---
+
+## Exploring Your Tables
+
+The Database Viewer presents your data in an intuitive table format that's easy to navigate and understand.
+
+### Table Navigation
+
+- **Select a table** from the dropdown or sidebar to view its contents
+- Tables are listed alphabetically for easy discovery
+- The active table name appears at the top of the data grid
+
+### Viewing Data
+
+Each table displays:
+
+- **Column headers** showing field names (id, name, email, etc.)
+- **Data rows** with actual values from your database
+- **Data types** indicated for each column
+- **Record count** and pagination info at the bottom
+
+> Think of it like a built-in spreadsheet viewer for your database—you can see everything but with the safety of read-only access during viewing.
+
+### Pagination
+
+For tables with many records:
+
+- Navigate pages using the pagination controls at the bottom
+- See "Page 1 of X" to understand the dataset size
+- Move forward and backward through your data
+- Adjust records per page if needed
+
+---
+
+## Database Information
+
+Beyond viewing data, you can access critical database connection details by clicking the **Database Information** button.
+
+### Connection Details
+
+The information panel displays essential configuration values:
+
+- **Project ID** – Your unique database project identifier
+- **Branch ID** – The current database branch you're working with
+- **Database Name** – The name of your database instance
+- **Authenticated Role URL** – Connection string for authenticated users
+- **Anonymous Role URL** – Connection string for public/anonymous access
+
+These details are crucial when:
+
+- Configuring external tools or services
+- Setting up API connections
+- Debugging authentication issues
+- Understanding your database architecture
+
+### Understanding the Role URLs
+
+**Authenticated Role URL:**
+
+- Used when users are signed in to your application
+- Provides full access based on your security rules
+- Includes authentication tokens for verified users
+
+**Anonymous Role URL:**
+
+- Used for public-facing features that don't require sign-in
+- Limited access based on your anonymous permissions
+- Suitable for public data or read-only operations
+
+⚠️ **Security Note:** Keep these URLs secure. Never share them publicly or commit them to public repositories.
